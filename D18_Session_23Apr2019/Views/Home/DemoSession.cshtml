@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewData["Title"] = "DemoSession";
+}
+@using Microsoft.AspNetCore.Http
+<h2>Demo Session</h2>
+@Context.Session.GetString("Ten") @Context.Session.GetInt32("Tuoi")
+
+@{ 
+    HangHoa hh = Context.Session.Get<HangHoa>("HangHoa");
+}
+@hh.HangHoaId - @hh.TenHangHoa : @hh.DonGia
